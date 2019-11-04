@@ -1,1 +1,11 @@
+spring:
+  application:
+    name: curency-exchange-value
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
 
+server:
+      port: 8000
