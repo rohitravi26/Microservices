@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.math.BigInteger;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name="exchange_value")
@@ -15,13 +15,13 @@ public class ExchangeValue {
         private String frm;
         private String to;
         @Column(name = "conversion_multiple")
-        private BigInteger conversionMultiple;
+        private BigDecimal conversionMultiple;
         private int port;
         public ExchangeValue() {
 
         }
 
-        public ExchangeValue(Long id, String frm, String to, BigInteger conversionMultiple) {
+        public ExchangeValue(Long id, String frm, String to, BigDecimal conversionMultiple) {
             this.id = id;
             this.frm = frm;
             this.to = to;
@@ -52,11 +52,11 @@ public class ExchangeValue {
             this.to = to;
         }
 
-        public BigInteger getConversionMultiple() {
+        public BigDecimal getConversionMultiple() {
             return conversionMultiple;
         }
 
-        public void setConversionMultiple(BigInteger conversionMultiple) {
+        public void setConversionMultiple(BigDecimal conversionMultiple) {
             this.conversionMultiple = conversionMultiple;
         }
 
